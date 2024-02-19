@@ -53,4 +53,4 @@ if __name__ == '__main__':
 
     print("condition number according numpi: ",np.linalg.cond(A,np.inf))
 
-    print("the git link:https://github.com/Merylhassid/condition_of_linear_equations.git6\ngroup:Almog Babila 209477678, HaI Karmi 207265687, Yagel Batito 318271863, Meryl Hassid 324569714\nthe student is Meryl Hassid 324569714")
+    print("the git link:https://github.com/Merylhassid/condition_of_linear_equations.git\ngroup:Almog Babila 209477678, HaI Karmi 207265687, Yagel Batito 318271863, Meryl Hassid 324569714\nthe student is Meryl Hassid 324569714")
