@@ -1,7 +1,7 @@
 import numpy as np
 from inverse_matrix import matrix_inverse
 from colors import bcolors
-from matrix_utility_fixed import print_matrix
+from matrix_utility import print_matrix
 
 
 def norm(mat):
@@ -33,12 +33,12 @@ def condition_number(A):
     print(bcolors.OKBLUE, "A:", bcolors.ENDC)
     print_matrix(A)
 
-    print(bcolors.OKBLUE, "inverse of A:", bcolors.ENDC)
-    print_matrix(A_inv)
+   ## print(bcolors.OKBLUE, "inverse of A:", bcolors.ENDC)
+   ## print_matrix(A_inv)
 
     print(bcolors.OKBLUE, "Max Norm of A:", bcolors.ENDC, norm_A, "\n")
 
-    print(bcolors.OKBLUE, "max norm of the inverse of A:", bcolors.ENDC, norm_A_inv)
+    ##print(bcolors.OKBLUE, "max norm of the inverse of A:", bcolors.ENDC, norm_A_inv)
 
     #print_matrix(np.dot(A_inv,A))
 
@@ -46,11 +46,19 @@ def condition_number(A):
 
 
 if __name__ == '__main__':
-    A = np.array([[1,0,2],[1,2,4],[0,0,1]])
+    A = np.array([[1,1/2,1/3],[1/2, 1/3,1/4],[1/3,1/4,1/5]])
     cond = condition_number(A)
 
-    print(bcolors.OKGREEN, "\n condition number: ", cond, bcolors.ENDC)
+    square_matrix = np.array([[1, 1/2, 1/3],
+                              [1/2, 1/3, 1/4],
+                              [1/3,1/ 4, 1/5]])
 
-    print("condition number according numpi: ",np.linalg.cond(A,np.inf))
+    if square_matrix is not None:
+      ##  print("Entered square matrix:")
+       ## print(square_matrix)
+        matrix_inverse(square_matrix)
+   ## print(bcolors.OKGREEN, "\n condition number: ", cond, bcolors.ENDC)
 
-    print("the git link: https://github.com/Babilabong/condition-of-linear-equations-\ngroup:Almog Babila, Hay Carmi, Yagel Batito, Meryl Hassid\nstudent:Meryl Hassid 324569714")
+   ## print("condition number according numpi: ",np.linalg.cond(A,np.inf))
+
+    print("the git link:https://github.com/Merylhassid/condition_of_linear_equations.git\ngroup:Almog Babila 209477678, HaI Karmi 207265687, Yagel Batito 318271863, Meryl Hassid 324569714\nthe student is Meryl Hassid 324569714")
